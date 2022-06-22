@@ -26,9 +26,8 @@ W$@@M!!! .!~~ !!     .:XUW$W!~ `"~:    :
 Wi.~!X$?!-~    : ?$$$B$Wu("**$RM!
 $R@i.~~ !     :   ~$$$$$B$$en:``
 ?MXT@Wx.~    :     ~"##*$$$$M~
-
                               
---~~BioXsec Website Tool~~ ->	https://github.com/BioXsec
+--~~BioXsec Boosting Tool~~ ->	https://github.com/BioXsec
 ''')
 
 
@@ -41,10 +40,10 @@ print(
     '[ Setting up program ]')
 views = input("Enter amount of views: ")
 
-time.sleep(0.5)
+time.sleep(0.2)
 
-print('[ Setting up duration ]')
-duration = input("Enter duration before opening another site (in seconds): ")
+print('[ Loading... ]')
+duration = 0.3
 
 toolbar_width = 50
 # setting up toolbar [-------------------------------------]
@@ -64,6 +63,8 @@ for i in range(toolbar_width):
 
 for i in range(int(views)):
     webbrowser.open_new(url)
+    time.sleep(1.2)
+    os.system("taskkill /im opera.exe /f")
     time.sleep(int(duration))
 
     print('Finisch!')
